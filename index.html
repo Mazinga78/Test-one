@@ -1,0 +1,186 @@
+<!DOCTYPE html>
+<html lang="it">
+
+<head>
+	<meta charset="utf-8">
+	<!-- Viewport -->
+	<meta name="viewport" content="width=device-width, initial-scale=1">
+	<!-- Insert Favicon -->
+	<link rel="shortcut icon" href="" />
+	<!-- Insert Title -->
+	<title>Regolo</title>
+
+	<!-- CSS -->
+
+	<!-- Normalize -->
+	<link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/normalize/8.0.1/normalize.min.css"
+		integrity="sha512-NhSC1YmyruXifcj/KFRWoC561YpHpc5Jtzgvbuzx5VozKpWvQ+4nXhPdFgmx8xqexRcpAglTj9sIBWINXa8x5w=="
+		crossorigin="anonymous" />
+	<!-- Bootstrap Css -->
+	<link rel="stylesheet" href="./css/bootstrap.min.css">
+	<!-- Custom Css -->
+	<link rel="stylesheet" href="./style.css">
+
+
+	<!-- JS -->
+
+	<!-- Jquery -->
+	<script src="./js/jquery-3.5.1.js"></script>
+	<!-- Popper.Js -->
+	<script src="https://cdnjs.cloudflare.com/ajax/libs/popper.js/1.12.9/umd/popper.min.js"></script>
+	<!-- Bootstrap Js -->
+	<script src="./js/bootstrap.bundle.min.js"></script>
+	<!-- Font Awesome v5.Js-->
+	<script src="https://use.fontawesome.com/releases/v5.0.8/js/all.js"></script>
+
+</head>
+
+<body>
+
+
+	<!-- 1st Row Text -->
+	<div class="container py-5">
+		<div class="text-center">
+			<h1 class="text-danger">Questo è il nostro h1</h1>
+			<h3 class="text-danger">Questo è il nostro h3</h3>
+		</div>
+	</div>
+
+	<!-- 1st Form -->
+	<div class="container">
+		<form name="uno">
+			<div class="row text-center">
+
+				<div class="col-md-3 col-sm-12">
+					<label>
+						<input type="radio" name="uno" value="1" checked>
+						<img src="./Assets/img/pngegg.png" class="img-fluid img-regolo">
+					</label>
+				</div>
+
+				<div class="col-md-3 col-sm-12">
+					<label>
+						<input type="radio" name="uno" value="2">
+						<img src="./Assets/img/pngegg.png" class="img-fluid img-regolo">
+					</label>
+				</div>
+
+				<div class="col-md-3 col-sm-12">
+					<label>
+						<input type="radio" name="uno" value="3">
+						<img src="./Assets/img/pngegg.png" class="img-fluid img-regolo">
+					</label>
+				</div>
+
+				<div class="col-md-3 col-sm-12">
+					<label>
+						<input type="radio" name="uno" value="4">
+						<img src="./Assets/img/pngegg.png" class="img-fluid img-regolo">
+					</label>
+				</div>
+
+			</div>
+		</form>
+	</div>
+
+	<!-- 2nd Row Text -->
+	<div class="container py-5">
+		<div class="text-center">
+			<h1 class="text-danger">Questo è il nostro h1</h1>
+			<h3 class="text-danger">Questo è il nostro h3</h3>
+		</div>
+	</div>
+	<!--  2nd Form -->
+	<div class="container">
+		<form name="due">
+			<div class="row text-center">
+
+				<div class="col-md-3 col-sm-12">
+					<label>
+						<input type="radio" name="due" value="1">
+						<img src="./Assets/img/pngegg.png" class="img-fluid img-regolo">
+					</label>
+				</div>
+
+				<div class="col-md-3 col-sm-12">
+					<label>
+						<input type="radio" name="due" value="2">
+						<img src="./Assets/img/pngegg.png" class="img-fluid img-regolo">
+					</label>
+				</div>
+
+				<div class="col-md-3 col-sm-12">
+					<label>
+						<input type="radio" name="due" value="3">
+						<img src="./Assets/img/pngegg.png" class="img-fluid img-regolo">
+					</label>
+				</div>
+
+				<div class="col-md-3 col-sm-12">
+					<label>
+						<input type="radio" name="due" value="4" checked>
+						<img src="./Assets/img/pngegg.png" class="img-fluid img-regolo">
+					</label>
+				</div>
+
+			</div>
+		</form>
+	</div>
+	<!-- Result -->
+	<div class="container py-5">
+		<!-- Button -->
+		<div class="text-center">
+			<button class="btn btn-lg btn-danger" type="button">Vedi il risultato</button>
+		</div>
+	</div>
+	<!-- Show Result -->
+	<div class="container padding">
+		<div class="row" id="result">
+			<div class="col-md-6 col-sm-6 text-center">
+				<img src="" class="img-fluid result-img img-result" alt="">
+			</div>
+			<div class="col-md-6 col-sm-6">
+				<p class="result-text"></p>
+			</div>
+		</div>
+	</div>
+
+	<!--- Footer -->
+
+	<script>
+		// document ready
+		$(document).ready(function () {
+			$(".btn").click(function () {
+
+				// Get value from input
+				var a = eval($('input[name="uno"]:checked').val());
+				var b = eval($('input[name="due"]:checked').val());
+
+				// Method
+				var c = a + b;
+				console.log(c);
+
+				// Result Range
+				var d = 5;
+				var e = 2;
+
+				// Result
+				if (c >= d) {
+					$(".result-img").attr("src", "./Assets/img/transparent-baby-icon-emoticon-set-icon-cheeky-icon-5f9ba965dacb01.4329535316040369658962.png");
+					$(".result-text").html("Risultato 1 <br> Questo è il risultato 1 Lorem ipsum dolor sit, amet consectetur adipisicing elit. Enim voluptatum dolore magnam deleniti tempora alias tempore? Aspernatur, error! Modi, odio error explicabo reprehenderit temporibus ipsa, ab, quos minima quidem autem neque deserunt ut voluptate quia. Similique eos vitae facere magni possimus porro neque! Adipisci, dolore natus alias tempora accusamus minus!");
+				} else if (c > e) {
+					$(".result-img").attr("src", "./Assets/img/kisspng-the-wynwood-yard-clip-art-vector-red-circle-ink-5a6de493f02c47.1778542515171513799838.png");
+					$(".result-text").html("Risultato 2 <br> Questo è il risultato 2 Lorem ipsum dolor sit, amet consectetur adipisicing elit. Enim voluptatum dolore magnam deleniti tempora alias tempore? Aspernatur, error! Modi, odio error explicabo reprehenderit temporibus ipsa, ab, quos minima quidem autem neque deserunt ut voluptate quia. Similique eos vitae facere magni possimus porro neque! Adipisci, dolore natus alias tempora accusamus minus!");
+				} else {
+					$(".result-img").attr("src", "./Assets/img/5a3a185132ceb1.89894673151375675320812609.png");
+					$(".result-text").html("Risultato 3 <br> Questo è il risultato 3 Lorem ipsum dolor sit, amet consectetur adipisicing elit. Enim voluptatum dolore magnam deleniti tempora alias tempore? Aspernatur, error! Modi, odio error explicabo reprehenderit temporibus ipsa, ab, quos minima quidem autem neque deserunt ut voluptate quia. Similique eos vitae facere magni possimus porro neque! Adipisci, dolore natus alias tempora accusamus minus!");
+				}
+			}
+			);
+		});
+	</script>
+</body>
+
+
+
+</html>

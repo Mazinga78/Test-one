@@ -1,0 +1,123 @@
+@import url('https://fonts.googleapis.com/css2?family=Montserrat:ital,wght@0,100;0,200;0,300;0,400;0,600;0,700;0,800;0,900;1,100;1,200;1,300;1,400;1,600;1,700;1,800;1,900&display=swap');
+
+html, body {
+  height: 100%;
+  width: 100%;
+  font-family: 'Montserrat', sans-serif;
+}
+
+html {
+  scroll-behavior: smooth;
+}
+
+body {
+  overscroll-behavior: none !important;
+}
+
+
+/* ------------------------
+-------Img Button Style----
+------------------------ */
+
+/* HIDE RADIO */
+[type=radio] { 
+  position: absolute;
+  opacity: 0;
+  width: 0;
+  height: 0;
+}
+
+/* Img Pointer */
+[type=radio] + img {
+  cursor: pointer;
+}
+
+/* Checked Style + Zoom*/
+[type=radio]:checked + img {
+  transition: transform .5s;
+  transform: scale(1.2);
+}
+
+.hide {
+  display: none;
+}
+
+.img-fluid {
+  max-width: 100%;
+  height: auto;
+}
+
+/* ------------------------
+-------Img Result----
+------------------------ */
+
+.img-result {
+  width: 60%;
+}
+
+
+/*---Media Queries --*/
+
+/* @media Tablet */
+
+@media (max-width: 979px) {
+
+}
+
+/* @media Smartphone */
+
+@media (max-width: 767px) {
+ 
+.img-regolo {
+  width: 50%;
+}
+
+}
+
+/*---Firefox Bug Fix --*/
+
+.carousel-item {
+  transition: -webkit-transform 0.5s ease;
+  transition: transform 0.5s ease;
+  transition: transform 0.5s ease, -webkit-transform 0.5s ease;
+  -webkit-backface-visibility: visible;
+  backface-visibility: visible;
+}
+
+.input-group.md-form.form-sm.form-1 input {
+  border: 1px solid #bdbdbd;
+  border-top-right-radius: 0.25rem;
+  border-bottom-right-radius: 0.25rem;
+}
+
+.input-group.md-form.form-sm.form-2 input {
+  border: 1px solid #bdbdbd;
+  border-top-left-radius: 0.25rem;
+  border-bottom-left-radius: 0.25rem;
+}
+
+.input-group.md-form.form-sm.form-2 input.red-border {
+  border: 1px solid #ef9a9a;
+}
+
+.input-group.md-form.form-sm.form-2 input.lime-border {
+  border: 1px solid #cddc39;
+}
+
+.input-group.md-form.form-sm.form-2 input.amber-border {
+  border: 1px solid #ffca28;
+}
+
+/*--- Bootstrap Padding Fix --*/
+
+[class*="col-"] {
+  padding: 1rem;
+}
+
+/* ! Box Sizing */
+
+*, *:before, *:after {
+  -webkit-box-sizing: border-box !important;
+  -moz-box-sizing: border-box !important;
+  box-sizing: border-box !important;
+}
